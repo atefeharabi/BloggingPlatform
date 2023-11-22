@@ -3,12 +3,15 @@ const path = require("path");
 const app = express();
 const assetsRouter = require("./server/assets-router");
 app.use("/server", assetsRouter); // /src or /server?x  
-app.use("/", express.static(path.join(__dirname, "public")));
+//app.use("/", express.static(path.join(__dirname, "public")));
 app.get("/api/v1", (req, res) => {
     res.json({
         project: "React and Express Boilerplate",
         from: "Vanaldito",
     });
+});
+app.get("/", (req, res) => {
+    res.json({ message: "Welcome to User application." });
 });
 app.get("/*", (_req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
@@ -20,3 +23,16 @@ app.listen(PORT, () => {
     console.log();
     console.log(' > Local: \x1b[36mhttp://localhost:\x1b[1m${PORT}/\x1b[0m');
 });
+
+
+// import config from './config/config.js' 
+// import app from './server/express.js'
+// app.get("/*", (req, res) => {
+// res.json({ message: "Welcome to User application." });
+// });
+// app.listen(config.port, (err) => { 
+// if (err) {
+// console.log(err) 
+// }
+// console.info('Server started on port %s.', config.port) 
+// });
