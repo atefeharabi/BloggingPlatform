@@ -11,7 +11,7 @@ app.get("/api/v1", (req, res) => {
     });
 });
 app.get("/", (req, res) => {
-    res.json({ message: "Welcome to User application." });
+    res.json({ message: "Welcome to Blogging Platform application." });
 });
 app.get("/*", (_req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
