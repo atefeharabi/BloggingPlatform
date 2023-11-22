@@ -1,3 +1,13 @@
+// import mongoose from 'mongoose' 
+
+// mongoose.Promise = global.Promise
+// mongoose.connect(config.mongoUri, { useNewUrlParser: true,
+//     useCreateIndex: true, 
+//     useUnifiedTopology: true } )
+// mongoose.connection.on('error', () => {
+//     throw new Error('unable to connect to database: ${mongoUri}') 
+// })
+
 const express = require("express");
 const path = require("path");
 const app = express();
@@ -13,9 +23,10 @@ app.get("/api/v1", (req, res) => {
 app.get("/", (req, res) => {
     res.json({ message: "Welcome to Blogging Platform application." });
 });
-app.get("/*", (_req, res) => {
+
+app.get("/home", (_req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
-})
+});
 const { PORT = 5000 } = process.env;
 app.listen(PORT, () => {
     console.log();
