@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
+    "@babel/node": "^7.22.19",
+    "babel": "^6.23.0",
     "body-parser": "^1.20.2",
     "compression": "^1.7.4",
     "concurrently": "^8.2.2",
@@ -13,6 +16,7 @@
     "express": "^4.18.2",
     "global": "^4.4.0",
     "helmet": "^7.1.0",
+    "lodash": "^4.17.21",
     "mongoose": "^8.0.1",
     "vite": "^5.0.0"
   },
