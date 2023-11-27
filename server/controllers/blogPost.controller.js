@@ -45,9 +45,13 @@ const update = async (req, res) => {
 
 const remove = async (req, res) => {
   try {
-    let blogPost = req.blogPost;
-    let deletedBlogPost = await blogPost.remove();
-    res.json(deletedBlogPost);
+    let blogPost = await BlogPost.findByIdAndDelete(req.params.blogPostId);
+    if (!blogPost) {
+      return res.status(404).json({
+        error: "Blog post not found"
+      });
+    }
+    res.json(blogPost);
   } catch (err) {
     return res.status(400).json({
       error: errorHandler.getErrorMessage(err)
@@ -55,20 +59,26 @@ const remove = async (req, res) => {
   }
 };
 
+
+
+
 const blogPostByID = async (req, res, next, id) => {
   try {
     let blogPost = await BlogPost.findById(id);
-    if (!blogPost)
-      return res.status('400').json({
+    if (!blogPost) {
+      return res.status(404).json({
         error: "Blog post not found"
       });
+    }
     req.blogPost = blogPost;
     next();
   } catch (err) {
-    return res.status('400').json({
+    return res.status(400).json({
       error: "Could not retrieve blog post"
     });
   }
 };
+
+
 
 export default { create, list, read, update, remove, blogPostByID };

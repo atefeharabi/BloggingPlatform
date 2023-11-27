@@ -11,7 +11,7 @@ export default () => {
     
     </head>
     <body>
-    <div id="root">Hello World</div> 
+    <div id="root">This is a blogging application</div> 
     <script type="text/javascript" src="/dist/bundle.js"></script>
     </body>
     </html>` 

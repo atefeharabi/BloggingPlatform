@@ -7,6 +7,8 @@ import helmet from 'helmet'
 import Template from './../template.js'
 import userRoutes from './routes/user.routes.js'
 import authRoutes from './routes/auth.routes.js'
+import blogPostRoutes from './routes/blogPost.routes.js';
+
 //import devBundle from './devBundle' 
 import path from 'path'
 const app = express()
@@ -28,6 +30,7 @@ app.use(cookieParser())
 app.use(compress())
 app.use(helmet())
 app.use(cors())
+app.use('/', blogPostRoutes);
 app.use((err, req, res, next) => {
 if (err.name === 'UnauthorizedError') {
 res.status(401).json({"error" : err.name + ": " + err.message}) 
