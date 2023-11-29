@@ -10,6 +10,7 @@ import authRoutes from './routes/auth.routes.js'
 //import devBundle from './devBundle' 
 import path from 'path'
 const app = express()
+
 const CURRENT_WORKING_DIR = process.cwd()
 //devBundle.compile(app)
 //...
@@ -22,6 +23,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/', userRoutes)
 app.use('/', authRoutes)
+app.use('/api', userRoutes);
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cookieParser())

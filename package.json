@@ -6,6 +6,7 @@
   "type": "module",
   "dependencies": {
     "@babel/node": "^7.22.19",
+    "@material-ui/core": "^4.12.4",
     "babel": "^6.23.0",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",

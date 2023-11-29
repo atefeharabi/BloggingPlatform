@@ -4,7 +4,8 @@
 
 body{
     margin: 0;
-    background-color: rgba(219, 219, 219, 0.267);
+    background-color: rgb(63, 63, 63);
+    color: white;
 }
 
 .container {
@@ -13,17 +14,20 @@ body{
 }
 
 .nav{
-    background-color: rgb(63, 63, 63);
+    background-color: rgb(41, 41, 41);
     color: white;
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
     gap: 2rem;
     padding: 0 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .nav img{
-    height: auto;   
+    height: auto;
+    box-shadow: 0px 0px 8px white;
 }
 
 .site-title{
