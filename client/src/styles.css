@@ -4,6 +4,7 @@
 
 body{
     margin: 0;
+    background-color: rgba(219, 219, 219, 0.267);
 }
 
 .container {
@@ -12,8 +13,8 @@ body{
 }
 
 .nav{
-    background-color: #ebc3fb;
-    color: #0a080b;
+    background-color: rgb(63, 63, 63);
+    color: white;
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
@@ -47,10 +48,14 @@ body{
 }
 
 .nav li.active{
-    background-color: #b897ca;
+    background-color: #a600ff;
+}
+
+.nav li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .nav li:hover{
-    background-color: #f6b305;
+    color: pink;
 }
 
