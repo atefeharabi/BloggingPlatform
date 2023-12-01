@@ -5,7 +5,7 @@ import shopCtrl from '../controllers/shop.controller.js'
 
 const router = express.Router()
 
-router.route('/api/shops')
+router.route('/api/pos')
   .get(shopCtrl.list)
 
 router.route('/api/shop/:shopId')

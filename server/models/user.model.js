@@ -14,10 +14,10 @@ unique: 'Email already exists',
 match: [/.+\@.+\..+/, 'Please fill a valid email address'],
 required: 'Email is required'
    },
- seller: {
-type: Boolean, 
-default: false
-   },
+//  seller: {
+// type: Boolean, 
+// default: false
+//    },
  photo: {
 data: Buffer, 
 contentType: String
