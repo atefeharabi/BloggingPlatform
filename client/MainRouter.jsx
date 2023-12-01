@@ -10,8 +10,10 @@ import PrivateRoute from './auth/PrivateRoute'
 import Menu from './core/Menu'
 import NewShop from './shop/NewShop'
 import Shops from './shop/Shops'
+import Posts from './post/Posts'
 import MyShops from './shop/MyShops'
 import Shop from './shop/Shop'
+import Post from './post/Post'
 import EditShop from './shop/EditShop'
 import NewProduct from './product/NewProduct'
 import EditProduct from './product/EditProduct'
@@ -36,6 +38,8 @@ const MainRouter = () => {
         <Route path="/product/:productId" component={Product}/>
         <Route path="/shops/all" component={Shops}/>
         <Route path="/shops/:shopId" component={Shop}/>
+        <Route path="/posts/all" component={Posts}/>
+        <Route path="/posts/:postId" component={Post}/>
 
         <Route path="/order/:orderId" component={Order}/>
         <PrivateRoute path="/seller/orders/:shop/:shopId" component={ShopOrders}/>
