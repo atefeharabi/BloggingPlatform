@@ -12,28 +12,32 @@ import {Link} from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
   root: theme.mixins.gutters({
-    maxWidth: 600,
+    maxWidth: 800,
     margin: 'auto',
     padding: theme.spacing(3),
     marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(3)
+    marginBottom: theme.spacing(3),
+    backgroundColor: 'rgb(41, 41, 41)',
+
   }),
   title: {
     margin: `${theme.spacing(3)}px 0 ${theme.spacing(2)}px`,
-    color: theme.palette.protectedTitle,
+    color: 'white',
     textAlign: 'center',
-    fontSize: '1.2em'
+    fontSize: '1.2em',
   },
   avatar:{
     width: 100,
     height: 100
   },
   subheading: {
-    color: theme.palette.text.secondary
+    color: 'white',  
   },
+  
   postTitle: {
     fontSize: '1.2em',
-    marginBottom: '5px'
+    marginBottom: '5px',
+    color: 'white',
   },
   details: {
     padding: '24px'
@@ -67,7 +71,7 @@ export default function Posts(){
         </Typography>
         <List dense>
           {posts.map((post, i) => {
-            return <Link to={"/posts/"+post._id} key={i}>
+            return  <Link to={"/posts/"+post._id} key={i} style={{ textDecoration: 'none' }}>
               <Divider/>
               <ListItem button>
                 {/* <ListItemAvatar>

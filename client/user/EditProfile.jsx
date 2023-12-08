@@ -19,27 +19,34 @@ const useStyles = makeStyles(theme => ({
     margin: 'auto',
     textAlign: 'center',
     marginTop: theme.spacing(5),
-    paddingBottom: theme.spacing(2)
+    paddingBottom: theme.spacing(2),
+    backgroundColor: 'rgb(41, 41, 41)',
+    color: 'white'
   },
   title: {
     margin: theme.spacing(2),
-    color: theme.palette.protectedTitle
+    color: 'white'
   },
   error: {
-    verticalAlign: 'middle'
+    verticalAlign: 'middle',
+    color: 'white'
+    
   },
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: 300
+    width: 300,
+    backgroundColor: 'white'
   },
   submit: {
     margin: 'auto',
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
+    backgroundColor: 'green'
+    
   },
   subheading: {
     marginTop: theme.spacing(2),
-    color: theme.palette.openTitle
+    color: 'white'
   }
 }))
 

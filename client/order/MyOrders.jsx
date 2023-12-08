@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   }),
   title: {
     margin: `${theme.spacing(2)}px 0 12px ${theme.spacing(1)}px`,
-    color: theme.palette.openTitle
+    color: 'white'
   }
 }))
 
@@ -48,7 +48,7 @@ export default function MyOrders(){
     return (
       <Paper className={classes.root} elevation={4}>
         <Typography type="title" className={classes.title}>
-          Your Orders
+          Your Blogs
         </Typography>
         <List dense>
           {orders.map((order, i) => {

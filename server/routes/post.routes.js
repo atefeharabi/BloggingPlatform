@@ -13,6 +13,7 @@ router.route('/api/post/:postId')
 
 router.route('/api/posts/by/:userId')
   .post(authCtrl.requireSignin, authCtrl.hasAuthorization, postCtrl.create)
+  //.post(postCtrl.create)
   .get(authCtrl.requireSignin, authCtrl.hasAuthorization, postCtrl.listByOwner)
 
 router.route('/api/posts/:postId')
