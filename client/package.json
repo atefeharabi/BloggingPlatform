@@ -1,9 +1,12 @@
 {
+  "homepage": "https://Tysmaker.github.io/Blogit-Deployed",
   "name": "client",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist",
     "dev": "concurrently 'vite' \"nodemon ../server.js\"",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
@@ -17,6 +20,7 @@
     "crypto": "^1.0.1",
     "dotenv": "^16.3.1",
     "express-jwt": "5",
+    "gh-pages": "^6.1.0",
     "global": "^4.4.0",
     "query-string": "6.11.1",
     "react": "16.13.1",
