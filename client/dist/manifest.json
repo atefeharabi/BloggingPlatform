@@ -1,0 +1,29 @@
+{
+  "assets/images/logo.png": {
+    "file": "assets/logo-bec09853.png",
+    "src": "core/logo.png"
+  },
+  "assets/images/unicornbikeImg.jpg": {
+    "file": "assets/unicornbikeImg-0c686699.jpg",
+    "src": "assets/images/unicornbikeImg.jpg"
+  },
+  "core/logo.png": {
+    "file": "assets/logo-bec09853.png",
+    "src": "core/logo.png"
+  },
+  "src/main.css": {
+    "file": "assets/main-018b5123.css",
+    "src": "src/main.css"
+  },
+  "src/main.jsx": {
+    "assets": [
+      "assets/logo-bec09853.png"
+    ],
+    "css": [
+      "assets/main-018b5123.css"
+    ],
+    "file": "assets/main-92b771b8.js",
+    "isEntry": true,
+    "src": "src/main.jsx"
+  }
+}
