@@ -17,4 +17,6 @@ const config = {
   mongoUri:
     "mongodb+srv://admin:admin@cluster0.hqb8bfm.mongodb.net/Blogging_Database",
 };
+
 export default config;
+

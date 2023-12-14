@@ -17,23 +17,27 @@ const useStyles = makeStyles(theme => ({
     margin: 'auto',
     textAlign: 'center',
     marginTop: theme.spacing(5),
-    paddingBottom: theme.spacing(2)
+    paddingBottom: theme.spacing(2),
+    backgroundColor: 'rgb(41, 41, 41)',
   },
   error: {
-    verticalAlign: 'middle'
+    verticalAlign: 'middle',
+    color: 'white',
   },
   title: {
     marginTop: theme.spacing(2),
-    color: theme.palette.openTitle
+    color:'white'
   },
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: 300
+    width: 300,
+    backgroundColor: 'white',
   },
   submit: {
     margin: 'auto',
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
+    backgroundColor: 'green'
   }
 }))
 
@@ -45,6 +49,7 @@ export default function Signin(props) {
     error: '',
     redirectToReferrer: false
   })
+  
 
   const clickSubmit = () => {
     const user = {
@@ -83,8 +88,12 @@ export default function Signin(props) {
           <Typography variant="h5" className={classes.title}>
             Sign In
           </Typography>
-          <TextField id="email" type="email" label="Email" className={classes.textField} value={values.email} onChange={handleChange('email')} margin="normal"/><br/>
-          <TextField id="password" type="password" label="Password" className={classes.textField} value={values.password} onChange={handleChange('password')} margin="normal"/>
+          <TextField id="email" type="email" label="Email" className={classes.textField} value={values.email} onChange={handleChange('email')} margin="normal"  InputProps={{
+    style: { backgroundColor: 'white' },
+  }}/><br/>
+          <TextField id="password" type="password" label="Password" className={classes.textField} value={values.password} onChange={handleChange('password')} margin="normal"  InputProps={{
+    style: { backgroundColor: 'white' },
+  }} />
           <br/> {
             values.error && (<Typography component="p" color="error">
               <Icon color="error" className={classes.error}>error</Icon>
@@ -98,5 +107,4 @@ export default function Signin(props) {
       </Card>
     )
 }
-
 

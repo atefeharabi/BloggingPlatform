@@ -17,27 +17,30 @@ import {Link} from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
   card: {
-    maxWidth: 600,
+    maxWidth: 800,
     margin: 'auto',
     textAlign: 'center',
     marginTop: theme.spacing(5),
-    paddingBottom: theme.spacing(2)
+    paddingBottom: theme.spacing(2),
+    backgroundColor: 'rgb(41, 41, 41)'
   },
   error: {
     verticalAlign: 'middle'
   },
   title: {
     marginTop: theme.spacing(2),
-    color: theme.palette.openTitle
+    color: 'white'
   },
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: 300
+    width: 300,
+    backgroundColor: 'white',
   },
   submit: {
     margin: 'auto',
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
+    backgroundColor: 'green'
   }
 }))
 

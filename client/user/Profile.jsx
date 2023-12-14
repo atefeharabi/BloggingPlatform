@@ -23,14 +23,16 @@ import MyOrders from './../order/MyOrders'
 
 const useStyles = makeStyles(theme => ({
   root: theme.mixins.gutters({
-    maxWidth: 600,
+    maxWidth: 800,
     margin: 'auto',
     padding: theme.spacing(3),
-    marginTop: theme.spacing(5)
+    marginTop: theme.spacing(5),
+    backgroundColor: 'rgb(41, 41, 41)',
+    color: 'white'
   }),
   title: {
     margin: `${theme.spacing(3)}px 0 ${theme.spacing(2)}px`,
-    color: theme.palette.protectedTitle
+    color: 'white'
   },
   stripe_connect: {
     marginRight: '10px',
@@ -81,19 +83,14 @@ export default function Profile({ match }) {
                 <Person/>
               </Avatar>
             </ListItemAvatar>
-            <ListItemText primary={user.name} secondary={user.email}/> {
+            <ListItemText
+      primary={user.name}
+      secondary={user.email}
+      primaryTypographyProps={{ style: { color: 'white' } }}
+      secondaryTypographyProps={{ style: { color: 'white' } }}
+    />{
              auth.isAuthenticated().user && auth.isAuthenticated().user._id == user._id &&
-             (<ListItemSecondaryAction>
-               {user.seller &&
-                 (user.stripe_seller
-                   ? (<Button variant="contained" disabled className={classes.stripe_connected}>
-                       Stripe connected
-                      </Button>)
-                   : (<a href={"https://connect.stripe.com/oauth/authorize?response_type=code&client_id="+config.stripe_connect_test_client_id+"&scope=read_write"} className={classes.stripe_connect}>
-                       <img src={stripeButton}/>
-                      </a>)
-                  )
-                }
+             (<ListItemSecondaryAction>       
                <Link to={"/user/edit/" + user._id}>
                  <IconButton aria-label="Edit" color="primary">
                    <Edit/>
